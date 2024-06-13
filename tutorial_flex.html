@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .container {
+      display: flex; /* flex | inline-flex */
+      flex-direction: row; /* row | row-reverse | column | column-reverse */
+      justify-content: center; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+      align-items: center; /* flex-start | flex-end | center | baseline | stretch */
+      border: 1px solid black;
+    }
+    .first-block {
+      background-color: red;
+      height: 100px;
+    }
+    .second-block {
+      background-color: blue;
+      height: 100px;
+    }
+  </style>
+  <title>Tutorial </title>
+</head>
+<body>
+  <!-- первая колонка -->
+  <div class="container" style="min-height: 10%;width: 5%;">
+    <div class="first-block">1</div>
+    <div class="second-block">2</div>
+  </div>
+
+  <!-- вторая колонка -->
+  <div class="container" style="min-height: 40%;width: 20%;">
+    <div class="first-block">1</div>
+    <div class="second-block">2</div>
+  </div>
+
+  <!-- третья колонка -->
+  <div class="container" style="min-height: 60%;width: 40%;">
+    <div class="first-block">1</div>
+    <div class="second-block">2</div>
+  </div>
+
+</body>
+</html>
