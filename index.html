@@ -35,26 +35,24 @@
       display: flex;
       flex-direction: row;
     }
-    .video-player>.button-panel>button {
+    .video-player>.button-panel>.btn {
       border-style: none;
       width: 30px;
       height: 30px;
       margin: 5px;
       background-color: transparent;
+      color: white;
+      font-size: 20px;
     }
     .video-player>.button-panel>.progress-bar {
       flex-grow: 1;
     }
-    .video-player>.button-panel>button:hover {
+    .video-player>.button-panel>.btn:hover {
       border-style: solid;
       border-width: 1px;
       border-color: white;
     }
 
-    .video-player>.button-panel>button>i {
-      color: white;
-      font-size: 20px;
-    }
   </style>
 </head>
 <body>
@@ -62,20 +60,20 @@
     <div class="js-video-container video-container">
     </div>
     <div class="button-panel">
-      <button class="js-play-button">
+      <button class="js-play-button btn">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button" hidden>
+      <button class="js-pause-button btn" hidden>
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button">
+      <button class="js-mute-button btn">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <button class="js-volume-button" hidden>
+      <button class="js-volume-button btn" hidden>
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
       <div class="progress-bar"></div>
-      <button class="js-fullscreen-button">
+      <button class="js-fullscreen-button btn">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
