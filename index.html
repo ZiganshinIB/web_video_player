@@ -11,125 +11,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-
-
   <style>
-    *:focus {
-      outline: none;
-    }
-    body {
-      margin: 5px;
-    }
-    .video-player {
-      width: 800px;
-      height: 600px;
-      background-color: black;
-      box-shadow: -3px -3px 5px grey;
-      display: flex;
-      flex-direction: column;
-    }
-    .video-container {
-      flex-grow:1;
-      cursor: pointer;
-      margin-bottom: 7px;
-    }
 
-    .video-player>.button-panel {
-      background-color: black;
-      border-style: none;
-      display: flex;
-      flex-direction: row;
-    }
-    .video-player>.button-panel>.btn {
-      border-style: none;
-      width: 30px;
-      height: 30px;
-      margin-left: 4px;
-      margin-bottom: 7px;
-      margin-right: 2px;
-      background-color: transparent;
-      color: white;
-      font-size: 20px;
-    }
-    .video-player>.button-panel>.progress-bar {
-      flex-grow: 1;
-    }
-    .roboto-regular {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-    .progress-bar {
-      margin-left: 3px;
-      margin-top: 6px;
-    }
-    .js-progress{
-      display: flex;
-      height: 5px;
-      margin-top: 7px;
-      margin-left: 8px;
-      margin-right: 7px;
-      flex-direction: row;
-      border-radius: 2px;
-      flex-grow: 1;
-    }
-    .js-progress-slider {
-      flex-direction: row;
-      background-color: #f8104d;
-      align-items: center;
-    }
-    .dot {
-  height: 8px;
-  width: 8px;
-  background-color: #f8104d;
-  border: 3px solid white;
-  border-radius: 50%;
-  margin-right: 5px;
-  margin-top: -4px;
-  opacity: 0.01;
-  transition-duration: .3s;
-}
-    .js-progress:hover .dot {
-    opacity: 1;
-    transition-duration: .3s;
-    }
   </style>
 </head>
-<body>
+<body class="m-5">
 <div id="player" class="video-player">
   <div class="js-video-container video-container">
   </div>
   <div class="button-panel">
-    <button class="js-play-button btn">
+    <button class="js-play-button btn btn-play">
       <i class="fa fa-play" aria-hidden="true"></i>
     </button>
-    <button class="js-pause-button btn" hidden>
+    <button class="js-pause-button btn-pause btn" hidden>
       <i class="fa fa-pause" aria-hidden="true"></i>
     </button>
-    <button class="js-mute-button btn">
+    <button class="js-mute-button btn-mute btn">
       <i class="fa fa-volume-up" aria-hidden="true"></i>
     </button>
-    <button class="js-volume-button btn" hidden>
-      <i class="fa fa-volume-off" aria-hidden="true"></i>
+    <button class="js-volume-button  btn btn-volume" hidden>
+      <i class="fa fa-volume-off " aria-hidden="true"></i>
     </button>
-    <div class="progress-bar" style="flex-grow: 1; display: flex; flex-direction: row;">
-      <div class="js-current-time roboto-regular" style="color: white;"></div>
-      <div class="js-progress">
-        <div class="js-progress-slider" >
-
-        </div>
-         <div class="dot"></div>
+    <div class="js-current-time current-time roboto-regular-white px-16 "></div>
+    <div class="js-progress progress">
+      <div class="js-progress-slider progress-slider" ></div>
+        <div class="dot"></div>
       </div>
-      <div class="js-duration roboto-regular" style="color: white;"></div>
-    </div>
-    <button class="js-fullscreen-button btn">
+    <div class="js-duration duration roboto-regular-white px-16"></div>
+    <button class="js-fullscreen-button btn btn-fullscreen">
       <i class="fa fa-expand" aria-hidden="true"></i>
     </button>
   </div>
   <!-- Here can be placed player controls: play and volume buttons -->
-
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>

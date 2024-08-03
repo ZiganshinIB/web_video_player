@@ -1,0 +1,92 @@
+*:focus {
+    outline: none;
+}
+.m-5 {
+    margin: 5px;
+}
+.roboto-regular-white {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.px-16 {
+    font-size: 16px;
+}
+.video-player {
+    margin-left: 1px;
+    width: 800px;
+    height: 600px;
+    background-color: black;
+    box-shadow: 8px 8px 15px grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container {
+    flex-grow:1;
+    margin-bottom: 4px;
+}
+
+.button-panel {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.button-panel>.btn {
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-size:20px;
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    margin-bottom: 6px;
+    margin-right: 4px;
+}
+
+.button-panel>.current-time, .button-panel>.duration {
+    margin-top: 6px;
+}
+
+.button-panel>.progress {
+    padding-top: 5px;
+    padding-left: 3px;
+}
+
+.button-panel>.progress{
+    background-color: black;
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.button-panel>.progress>.progress-slider {
+    background-color: #f8104d;
+    height: 5px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #f8104d;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: -5px;
+    flex-grow: 0;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+.progress:hover .dot {
+    opacity: 1;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
